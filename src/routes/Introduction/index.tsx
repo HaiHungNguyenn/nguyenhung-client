@@ -88,7 +88,7 @@ function Introduction() {
                 </div>
                 <div className='h-fit flex w-2/3 flex-row justify-between'>
                     {
-                        progresses.map((item, idx) => (
+                        progresses.map((item) => (
                             <div className='flex flex-col w-[360px] justify-between h-full '>
                                 <img className="w-[360px] h-[360px]" src={item.image} alt="" />
 

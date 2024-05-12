@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import { useState } from 'react'
 
 import Banner from '/Header/header-banner.png'
 import KohserImage from '/Certificate/kosher.png'
