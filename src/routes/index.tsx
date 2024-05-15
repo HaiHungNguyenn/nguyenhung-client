@@ -3,6 +3,8 @@ import PrivateRoute from "./PrivateRoute";
 import Demo from "./Demo";
 import Introduction from "./Introduction";
 import ClientLayout from "../layouts/ClientLayout";
+import Product from "./Products";
+import ProductDetail from "./Products/ProductDetail";
 
 interface Route {
     index?: boolean;
@@ -27,6 +29,16 @@ const publicRoutes: Route[]  = [
         index: true,
         path:"/about",
         element: <Introduction />
+    },
+    {
+        index: true,
+        path:"/products",
+        element: <Product />
+    },
+    {
+        index: true,
+        path:"/product/:id",
+        element:  <ProductDetail />
     }
 ];
 

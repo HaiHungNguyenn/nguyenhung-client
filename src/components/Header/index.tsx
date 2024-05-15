@@ -19,7 +19,7 @@ const leftNavItems: NavItem[] = [
         text:"Giới thiệu"
     },
     {
-        path:"",
+        path:"/products",
         text:"Sản phẩm"
     },
 ]

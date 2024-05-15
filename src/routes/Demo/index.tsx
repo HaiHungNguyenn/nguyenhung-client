@@ -99,10 +99,13 @@ const recipes: recipeItem[] = [
         portion: 2
     },
 ]
+const textStyle : React.CSSProperties = {
+    WebkitTextStroke : '2px black'
+};
 
 
 function Demo() {
-    const [hoveredIndex, setHoveredIndex] =  useState<number | null>(null);
+const [hoveredIndex, setHoveredIndex] =  useState<number | null>(null);
 
 
     return (
@@ -120,7 +123,7 @@ function Demo() {
             <div className='w-full h-fit bg-white flex flex-col items-center border-b-4 border-primary'>
                 <div className='flex items-center flex-row gap-10  w-full justify-center h-fit mt-8'>
                     <div className='w-[70px] h-[2px] bg-primary'></div>
-                    <h1 className=' text-[70px] text-accent font-bold drop-shadow-[0_3px_1.2px_rgba(1,1,1,1)]'>GIỚI THIỆU</h1>
+                    <h1 className=' text-[70px] text-accent font-bold' style={textStyle}>GIỚI THIỆU</h1>
                     <div className='w-[70px] h-[2px] bg-primary'></div>
                 </div>
                 <div className='w-1/3'>
@@ -138,7 +141,7 @@ function Demo() {
             <div className='w-full h-fit bg-white flex flex-col items-center border-b-2 border-primary px-5'>
                 <div className='flex items-center flex-row gap-10  border-t-2  border-primary mt-1 w-full justify-center h-fit pt-8'>
                     <div className='w-[70px] h-[2px] bg-primary'></div>
-                    <h1 className=' text-[70px] text-accent font-bold drop-shadow-[0_3px_1.2px_rgba(1,1,1,1)]'>SẢN PHẨM</h1>
+                    <h1 className=' text-[70px] text-accent font-bold' style={textStyle}>SẢN PHẨM</h1>
                     <div className='w-[70px] h-[2px] bg-primary'></div>
                 </div>
 
@@ -173,7 +176,7 @@ function Demo() {
             <div className='w-full h-fit bg-white flex flex-col items-center border-b-2 border-primary px-5'>
                 <div className='flex items-center flex-row gap-10  border-t-2  border-primary mt-1 w-full justify-center h-fit pt-8 mb-16'>
                     <div className='w-[70px] h-[2px] bg-primary'></div>
-                    <h1 className=' text-[70px] text-accent font-bold drop-shadow-[0_3px_1.2px_rgba(1,1,1,1)]'>CÔNG THỨC CHẾ BIẾN</h1>
+                    <h1 className=' text-[70px] text-accent font-bold' style={textStyle}>CÔNG THỨC CHẾ BIẾN</h1>
                     <div className='w-[70px] h-[2px] bg-primary'></div>
                 </div>
 
@@ -183,8 +186,8 @@ function Demo() {
                             recipes.map((item, idx) => (
                                 <CarouselItem className='basis-1/4 flex flex-row' key={idx}>
                                     <div className='w-auto h-full relative mx-4 hover:cursor-pointer' onMouseEnter = {() => {setHoveredIndex(idx)}} onMouseLeave={() => {setHoveredIndex(null)}}>
-                                        <div className='w-auto object-contain h-auto'>
-                                            <img src={item.image} alt="" />
+                                        <div className='w-[360px] object-contain h-[360px]'>
+                                            <img className='w-full h-full object-cover' src={item.image} alt="" />
                                         </div>
                                         <div className={`absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-full pl-10 bg-white py-4 bg-opacity-80 
                                             ${
